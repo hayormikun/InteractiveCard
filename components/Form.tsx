@@ -1,7 +1,6 @@
 import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
-import Image from 'next/image'
 import { useContext, useState } from 'react'
 import { CardContext } from './Context'
 
@@ -55,11 +54,11 @@ export const Form = () => {
 
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>({
     resolver: yupResolver(schema),
-    // shouldUseNativeValidation: true,
   })
 
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
@@ -82,15 +81,14 @@ export const Form = () => {
 
     setCardHolder(cardHolder)
     setCardNumber(cardNumber.toString())
-    
-    
+
     setCvc(cvc.toString())
 
     setIsCompleted(true)
   }
 
   return (
-    <div className="md:flex md:mt-64 h-full w-full md:w-6/12 mx-auto">
+    <div className="lg:flex lg:mt-64 h-full w-full lg:w-6/12 mx-auto">
       {!isCompleted ? (
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -104,7 +102,13 @@ export const Form = () => {
               {' '}
               CARDHOLDER NAME{' '}
             </label>
-            <span className={errors.cardHolder ? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0"}>
+            <span
+              className={
+                errors.cardHolder
+                  ? ''
+                  : 'grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0'
+              }
+            >
               <input
                 className={
                   errors.cardHolder
@@ -117,7 +121,9 @@ export const Form = () => {
               />
             </span>
             {errors.cardHolder && (
-              <span className="text-redError mt-2">{errors.cardHolder.message}</span>
+              <span className="text-redError mt-2">
+                {errors.cardHolder.message}
+              </span>
             )}
           </div>
           <div className="flex flex-col mt-5">
@@ -128,7 +134,13 @@ export const Form = () => {
               {' '}
               CARD NUMBER{' '}
             </label>
-            <span className={errors.cardNumber ? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0"}>
+            <span
+              className={
+                errors.cardNumber
+                  ? ''
+                  : 'grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0'
+              }
+            >
               <input
                 className={
                   errors.cardNumber
@@ -141,7 +153,9 @@ export const Form = () => {
               />
             </span>
             {errors.cardNumber && (
-              <span className="text-redError mt-2">{errors.cardNumber.message}</span>
+              <span className="text-redError mt-2">
+                {errors.cardNumber.message}
+              </span>
             )}
           </div>
           <div className="flex md:grid md:grid-cols-2 gap-5 mt-5">
@@ -154,7 +168,13 @@ export const Form = () => {
                 EXP. DATE (MM/YY){' '}
               </label>
               <div className="flex gap-2">
-              <span className={errors.month? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0"}>
+                <span
+                  className={
+                    errors.month
+                      ? ''
+                      : 'grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0'
+                  }
+                >
                   <input
                     className={
                       errors.month
@@ -167,7 +187,13 @@ export const Form = () => {
                   />
                 </span>
 
-                <span className={errors.year? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0"}>
+                <span
+                  className={
+                    errors.year
+                      ? ''
+                      : 'grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0'
+                  }
+                >
                   <input
                     className={
                       errors.year
@@ -198,7 +224,13 @@ export const Form = () => {
                 {' '}
                 CVC
               </label>
-              <span className={errors.cvc? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[98.5%] p-0 m-0"}>
+              <span
+                className={
+                  errors.cvc
+                    ? ''
+                    : 'grad h-fit active:outline-none focus:outline-none rounded-md w-[98.5%] p-0 m-0'
+                }
+              >
                 <input
                   className={
                     errors.cvc
@@ -257,7 +289,13 @@ export const Form = () => {
           </span>
           <button
             onClick={() => {
-              setIsCompleted(!isCompleted)
+              reset()
+              setCardHolder('JANE APPLESEED'),
+                setCardNumber('0000000000000000'),
+                setMonth('00'),
+                setYear('00'),
+                setCvc('000'),
+                setIsCompleted(!isCompleted)
             }}
             className="mt-10 py-3 px-5 font-medium rounded-md bg-darkViolet text-white tracking-wider w-full"
           >

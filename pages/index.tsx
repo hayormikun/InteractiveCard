@@ -1,28 +1,25 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
-import { Card } from '../components/Card'
-import { Heading } from '../components/Heading'
-
-
+import { About } from '../components/About'
+import { Contact } from '../components/Contact'
+import { Navbar } from '../components/Navbar'
+import { Projects } from '../components/Projects'
+import { Skills } from '../components/Skills'
 
 const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Madcuisnes | Home</title>
+        <title>Favour Akomolafe | Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center justify-center py-5">
-        <Heading heading='Dashboard' />
-        <div className="grid md:grid-cols-2 gap-12">
-          <Card image='/img/rice.jpeg' alt='products' heading="products" description="available products to be sold" link="/products"/>
-          <Card image='/img/EBA.jpeg' alt='extras' heading="extras" description="available extras to be sold" link="/extras"/>
-          <Card image='/img/orders.png' alt='orders'  heading="orders" description="customers' orders" link="/orders"/>
-          <Card image='/img/category.jpeg' alt='category' heading="category" description="products categories" link="/categories"/>
-        </div>
-      </main>
 
+      <main className="pt-24 flex flex-col justify-center py-5 w-10/12 mx-auto">
+        <About />
+        <Skills />
+        <Projects/>
+        <Contact />
+      </main>
     </div>
   )
 }

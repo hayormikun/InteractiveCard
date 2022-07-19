@@ -129,7 +129,7 @@ export const Contact = () => {
               </a>
             </Link>
 
-            <Link href={'https://www.twitter.com/'}>
+            <Link href={'https://www.twitter.com/FavorAkomolafe'}>
               <a className="flex items-center">
                 <FaTwitter className="w-6 mr-2 text-blue-400" /> Twitter
               </a>

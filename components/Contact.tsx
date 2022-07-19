@@ -110,27 +110,28 @@ export const Contact = () => {
             Connect via:{' '}
           </h2>
           <div className="space-y-7 font-semibold text-md text-gray-400 w-fit">
-            <Link href={'https://www.github.com/hayormikun'}>
-              <a target={"_blank"} className="flex items-center">
+            <Link href={'https://www.github.com/hayormikun'} target={"_blank"}>
+              <a className="flex items-center">
                 <FaGithub className="w-6 mr-2 text-black" /> Github
               </a>
             </Link>
             <Link
               href={'https://www.linkedin.com/in/favour-akomolafe-7345b9114/'}
+              target={"_blank"}
             >
-              <a target={"_blank"} className="flex items-center">
+              <a className="flex items-center">
                 <FaLinkedinIn className="w-6 mr-2 text-blue-400" /> LinkedIn
               </a>
             </Link>
 
-            <Link href={'mailto:akomolafefavour@gmail.com'}>
-              <a target={"_blank"} className="flex items-center">
+            <Link href={'mailto:akomolafefavour@gmail.com'} target={"_blank"}>
+              <a className="flex items-center">
                 <FaMailBulk className="w-6 mr-2 text-zinc-400" /> Mail
               </a>
             </Link>
 
-            <Link href={'https://www.twitter.com/FavorAkomolafe'}>
-              <a target={"_blank"} className="flex items-center">
+            <Link href={'https://www.twitter.com/FavorAkomolafe'} target={"_blank"}>
+              <a className="flex items-center">
                 <FaTwitter className="w-6 mr-2 text-blue-400" /> Twitter
               </a>
             </Link>

@@ -19,7 +19,7 @@ export const Projects = () => {
         >
           <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
             <Image
-              src={'/img/favourakomolafe.png'}
+              src={'/img/favourakomlafe.png'}
               width={450}
               height={300}
               layout={'responsive'}

@@ -152,8 +152,7 @@ export const Skills = () => {
             </div>
 
             <div className="flex flex-col items-center">
-              <h3 className="text-lg flex items-center text-gray-600 font-semibold">
-                <FaAws className="w-7 h-14 mr-4 text-gray-600" />
+              <h3 className="text-lg flex items-center text-gray-600 font-bold">
                 REST API
               </h3>
               <p className="my-3 text-center">

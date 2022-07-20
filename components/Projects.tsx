@@ -60,7 +60,7 @@ export const Projects = () => {
               <p className="text-gray-400 font-medium">
                 Madcuisines is a Uk meal booking app where customers order their
                 desired meals and get it delivered to them timely at their
-                desired locations. <br /> <br /> Products are orders are
+                desired locations. <br /> <br /> Products and orders are
                 monitored and managed by authorized personnels via Madcuisines
                 admin panel.
               </p>

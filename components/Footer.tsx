@@ -13,7 +13,7 @@ export const Footer = () => {
       </div>
 
       <h3 className="flex flex-shrink items-center text-gray-400 text-md font-medium">
-        copyright <span className="mx-1 text-md"> &copy; </span> {year}
+        Copyright <span className="mx-1 "> &copy; </span> {year}
       </h3>
     </footer>
   )

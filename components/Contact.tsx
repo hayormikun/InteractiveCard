@@ -99,7 +99,7 @@ export const Contact = () => {
                 type="submit"
                 className="flex items-center justify-center bg-blue-700 hover:bg-blue-900  rounded-md tracking-wider cursor-pointer px-5 py-3 w-full text-white text-lg font-semibold"
               >
-                Send message <BiMailSend className="w-6 h-7 ml-2" />
+                Send a message <BiMailSend className="w-6 h-7 ml-2" />
               </button>
             </div>
           </form>

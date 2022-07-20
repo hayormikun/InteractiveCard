@@ -26,7 +26,7 @@ export const About = () => {
             <p className="text-gray-500 font-medium mb-5">
               Software developer at Behruz Hybrid, a
               software development company aimed at offering secure, scalable
-              and desired products to clients.
+              and desired products to clients. I build scalable web apps using modern frontend technologies and frameworks such as React.js, Next.js and develop backend application using Node.js and Express.js framework.
             </p>
             <Projects
               activeClass="projects"

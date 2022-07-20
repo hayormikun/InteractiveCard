@@ -30,7 +30,7 @@ export const Projects = () => {
               <h2 className="text-blue-600 text-lg font-semibold mb-3">
                 Favour Akomolafe Portfolio
               </h2>
-              <p className="text-gray-400 font-normal">
+              <p className="text-gray-400 font-medium">
                 This portfolio site is aimed at showcasing completed projects by
                 Favour Akomolafe. <br /> <br />Favour Akomolafe is a software
                 developer at Behruz Hybrid, a software development company aimed
@@ -57,7 +57,7 @@ export const Projects = () => {
               <h2 className="text-teal-400 text-lg font-semibold mb-3">
                 Madcuisines
               </h2>
-              <p className="text-gray-400 font-normal">
+              <p className="text-gray-400 font-medium">
                 Madcuisines is a Uk meal booking app where customers order their
                 desired meals and get it delivered to them timely at their
                 desired locations. <br /> <br /> Products are orders are
@@ -82,7 +82,7 @@ export const Projects = () => {
               <h2 className="text-red-400 text-lg font-semibold mb-3">
                 Saviours Assembly
               </h2>
-              <p className="text-gray-400 font-normal">
+              <p className="text-gray-400 font-medium">
                 Saviours Assembly is a Bible believing church with faith and
                 creed centred on Christ and the reality of what He has done in
                 his death, burial and resurrection. <br />
@@ -108,7 +108,7 @@ export const Projects = () => {
               <h2 className="text-blue-400 text-lg font-semibold mb-3">
                 Medvista Diagnostics
               </h2>
-              <p className="text-gray-400 font-normal">
+              <p className="text-gray-400 font-medium">
                 Medvista Diagnostic Services is Nigeria's fastest growing
                 medical diagnostics centre. They render quality and affordable
                 healthcare services to patients. <br /> <br /> Patients can
@@ -134,7 +134,7 @@ export const Projects = () => {
               <h2 className="text-blue-600 text-lg font-semibold mb-3">
                 Biosec Solutions
               </h2>
-              <p className="text-gray-400 font-normal">
+              <p className="text-gray-400 font-medium">
                 Biosec Solutions is an identity management consultancy with core
                 biometrics, smart card, token based enterprise architecture
                 strengths with cummulative experience of over 30 years. <br />{' '}

@@ -9,9 +9,11 @@ import {
   FaReact,
 } from 'react-icons/fa'
 
+import {SiMongodb, SiNextdotjs, SiTypescript} from 'react-icons/si'
+
 export const Skills = () => {
   return (
-    <div id='skills' className="my-12 w-full">
+    <div id="skills" className="my-12 w-full">
       <h1 className="text-blue-700 font-bold text-6xl text-center">
         Skills and Expertise
       </h1>
@@ -26,11 +28,12 @@ export const Skills = () => {
                 <FaHtml5 className="w-7 h-14 mr-4 text-red-500" />
                 HTML
               </h3>
-              <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+              <p className="my-3 text-center text-md font-normal">
+                The HyperText Markup Language or HTML is the standard markup
+                language for documents designed to be displayed in a web
+                browser. <br /> I'm highly proficient with the use of HTML for
+                markup of webpages with a linkendin skill badge in HTMl to
+                assert my proficiency.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -38,11 +41,14 @@ export const Skills = () => {
                 <FaCss3Alt className="w-7 h-14 mr-4 text-red-500" />
                 CSS
               </h3>
-              <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+              <p className="my-3 text-center text-md font-normal">
+                Cascading Style Sheets is a style sheet language used for
+                describing the presentation of a document written in a markup
+                language such as HTML or XML.
+                <br /> Styling of webpages to fit required design/layouts,
+                improve user experience using CSS and CSS frameworks are my
+                forte. I've earned a linkedin bage to assert my profiency with
+                the skill.
               </p>
             </div>
 
@@ -52,23 +58,25 @@ export const Skills = () => {
                 JavaScript
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                JavaScript, often abbreviated JS, is a programming language that
+                is one of the core technologies of the World Wide Web, alongside
+                HTML and CSS. As of 2022, 98% of websites use JavaScript on the
+                client side for web page behavior, often incorporating
+                third-party libraries.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <h3 className="text-lg items-center flex text-gray-600 font-semibold">
-                <FaJs className="w-7 h-14 mr-4 text-blue-400" />
+                <SiTypescript className="w-7 h-14 mr-4 text-blue-400" />
                 TypeScript
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                TypeScript is a programming language developed and maintained by
+                Microsoft. It is a strict syntactical superset of JavaScript and
+                adds optional static typing to the language. It is designed for
+                the development of large applications and transpiles to
+                JavaScript.
               </p>
             </div>
 
@@ -78,22 +86,21 @@ export const Skills = () => {
                 React.js
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                React is a free and open-source front-end JavaScript library for
+                building user interfaces based on UI components. It is
+                maintained by Meta and a community of individual developers and
+                companies.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <h3 className="text-lg flex items-center text-gray-600 font-semibold">
-                <FaCss3Alt className="w-7 h-14 mr-4 text-red-500" />
+                <SiNextdotjs className="w-7 h-14 mr-4 text-gray-700" />
                 Next.js
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                Next.js is an open-source web development framework built on top
+                of Node.js enabling React-based web applications functionalities
+                such as server-side rendering and generating static websites.
               </p>
             </div>
           </div>
@@ -110,36 +117,49 @@ export const Skills = () => {
                 Node.js
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                Node.js is an open-source, cross-platform, back-end JavaScript
+                runtime environment that runs on the V8 engine and executes
+                JavaScript code outside a web browser, which was designed to
+                build scalable network applications.
               </p>
             </div>
-
-            <div className="flex flex-col items-center">
+            {/* <div className="flex flex-col items-center">
               <h3 className="text-lg flex items-center text-gray-600 font-semibold">
                 <FaNodeJs className="w-7 h-14 mr-4 text-green-400" />
                 Express.js
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                Express.js, or simply Express, is a back end web application
+                framework for Node.js, released as free and open-source software
+                under the MIT License. It is designed for building web
+                applications and APIs. It has been called the de facto standard
+                server framework for Node.js.
+              </p>
+            </div> */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-lg flex items-center text-gray-600 font-semibold">
+                <SiMongodb className="w-7 h-14 mr-4 text-green-600" />
+                Mongo DB
+              </h3>
+              <p className="my-3 text-center">
+                MongoDB is an open source cross-platform document-oriented
+                database program. Classified as a NoSQL database program,
+                MongoDB uses JSON-like documents with optional schemas. MongoDB
+                is developed by MongoDB Inc. and licensed under the Server Side
+                Public License which is deemed non-free by several
+                distributions.
               </p>
             </div>
 
             <div className="flex flex-col items-center">
               <h3 className="text-lg flex items-center text-gray-600 font-semibold">
-                <FaNodeJs className="w-7 h-14 mr-4 text-green-400" />
-                Mongo DB
+                <FaAws className="w-7 h-14 mr-4 text-gray-600" />
+                REST API
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                Representational state transfer is a software architectural
+                style that describes a uniform interface between decoupled
+                components in the Internet in a Client-Server architecture.
               </p>
             </div>
 
@@ -149,14 +169,14 @@ export const Skills = () => {
                 AWS
               </h3>
               <p className="my-3 text-center">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque
-                asperiores, et rerum eligendi sed quos dolorem esse quae ipsam
-                iusto beatae consequuntur doloribus! Magni laborum perferendis
-                iusto quidem quaerat aperiam.
+                Amazon Web Services, Inc. is a subsidiary of Amazon that
+                provides on-demand cloud computing platforms and APIs to
+                individuals, companies, and governments, on a metered
+                pay-as-you-go basis. These cloud computing web services provide
+                distributed computing processing capacity and software tools via
+                AWS server farms.
               </p>
             </div>
-
-            
           </div>
         </>
       </div>

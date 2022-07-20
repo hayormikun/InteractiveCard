@@ -23,15 +23,10 @@ export const About = () => {
             <h1 className="text-gray-700 text-5xl font-bold mb-5">
               Hello, I am <span className="text-blue-700">Favour</span>
             </h1>
-            <p className="text-gray-500 font-normal mb-5">
-              Software developer at Behruz hybrid, Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Modi fugiat est ab nobis nulla,
-              sapiente, saepe reprehenderit maiores ea at non nam impedit autem
-              illum adipisci natus, repellat accusantium et! Lorem ipsum dolor
-              sit amet consectetur adipisicing elit. Repellendus aliquam minima
-              quidem voluptas, assumenda nisi, quas doloremque odit eveniet
-              ipsam nobis? Esse dolore nostrum, laudantium explicabo similique
-              officiis porro unde?
+            <p className="text-gray-500 font-medium mb-5">
+              Software developer at Behruz Hybrid, a
+              software development company aimed at offering secure, scalable
+              and desired products to clients.
             </p>
             <Projects
               activeClass="projects"

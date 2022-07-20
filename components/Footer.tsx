@@ -5,7 +5,7 @@ export const Footer = () => {
   const year = format(date, 'yyyy')
 
   return (
-    <footer className="w-full bg-gray-50 border-t-2 border-zinc-200 py-4 px-10 md:px-20 flex items-center justify-between">
+    <footer className="w-full bg-gray-50 border-t-2 border-zinc-200 py-4 px-10 md:px-20 flex items-center justify-between font-nunito">
       <div className="text-lg font-bold text-gray-500">
         <p>
           Favour <span className="text-blue-600">Akomolafe</span>

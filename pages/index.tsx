@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="pt-24 flex flex-col justify-center py-5 w-10/12 mx-auto">
+      <main className="pt-24 flex flex-col justify-center py-5 w-10/12 mx-auto font-nunito">
         <About />
         <Skills />
         <Projects/>

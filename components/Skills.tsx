@@ -1,6 +1,8 @@
 import { SunIcon } from '@heroicons/react/outline'
+import { BiCloud } from 'react-icons/bi'
 import {
   FaAws,
+  FaCloud,
   FaCss3,
   FaCss3Alt,
   FaHtml5,
@@ -153,6 +155,9 @@ export const Skills = () => {
 
             <div className="flex flex-col items-center">
               <h3 className="text-lg flex items-center text-gray-600 font-bold">
+                <FaCloud className="w-7 h-14 mr-4 text-gray-500"/>
+
+                
                 REST API
               </h3>
               <p className="my-3 text-center">

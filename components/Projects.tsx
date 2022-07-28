@@ -17,13 +17,13 @@ export const Projects = () => {
           duration={500}
           smooth={true}
         >
-          <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/favourakomlafe.png'}
-              width={450}
-              height={300}
+              width={520}
+              height={348}
               layout={'responsive'}
-              className="shadow-md"
+              alt="Favour Akomolafe Portfolio"
             />
 
             <div className="block p-5">
@@ -44,13 +44,13 @@ export const Projects = () => {
         </About>
 
         <Link href={'madcuisine'} target={'_blank'}>
-          <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/madcuisines.png'}
-              width={450}
-              height={300}
+              width={520}
+              height={348}
               layout={'responsive'}
-              className="shadow-md"
+              alt="Madcuisines"
             />
 
             <div className="block p-5">
@@ -69,14 +69,16 @@ export const Projects = () => {
         </Link>
 
         <Link href={'http://savioursassembly.com/'} target={'_blank'}>
-          <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
+            <div className='border-b-2 border-gray-100'>
             <Image
               src={'/img/savioursassembly.png'}
-              width={450}
-              height={300}
+              width={520}
+              height={348}
               layout={'responsive'}
-              className="w-full, h-full"
+              alt="Saviours Assembly"
             />
+            </div>
 
             <div className="block p-5">
               <h2 className="text-red-400 text-lg font-semibold mb-3">
@@ -95,13 +97,13 @@ export const Projects = () => {
         </Link>
 
         <Link href={'http://medvistadiagnostics.com/'} target={'_blank'}>
-          <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/medvista.png'}
-              width={450}
-              height={300}
+              width={520}
+              height={348}
               layout={'responsive'}
-              className="shadow-md"
+              alt="Medvista Diagnostics"
             />
 
             <div className="block p-5">
@@ -120,13 +122,12 @@ export const Projects = () => {
         </Link>
 
         <Link href={'http://biosec.com.ng/'} target={'_blank'}>
-          <div className="bg-gray-50 max-w-[450px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2">
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/biosecsolutions.png'}
-              width={450}
-              height={300}
+              width={520}
+              height={348}
               layout={'responsive'}
-              className="shadow-md"
               alt="Biosec Solutions"
             />
 

@@ -2,28 +2,55 @@ import { MailIcon, UserCircleIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import { FaGithub, FaLinkedinIn, FaMailBulk, FaTwitter } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import axios from 'axios'
+import { useMutation, UseMutationResult } from 'react-query'
+import { ErrorPrompt } from './ErrorPrompt'
+import { Success } from './Success'
 
-type FormData = {
+type FormValues = {
   name: string
   email: string
   message: string
 }
 
+const submitForm = async (data: FormData): Promise<FormData> => {
+  return await axios.post(`${process.env.BASE_URL}/message`, data)
+}
+
 export const Contact = () => {
+
+  const {
+    mutate,
+    isLoading,
+    isError,
+    error,
+    isSuccess,
+  }: UseMutationResult<FormData, Error, FormData> = useMutation<
+    FormData,
+    Error,
+    FormData
+  >(submitForm)
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormData>({
+  } = useForm<FormValues>({
     shouldUseNativeValidation: true,
   })
 
-  const onSubmit = async (data: FormData) => {
-    await axios.post('http://localhost:5000/api/message', data).then(()=>{
-      console.log('user created')
-    })
+  const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
+    const { name, email, message } = data
+
+    console.log(name, email, message)
+
+    const formData = new FormData()
+
+    formData.append('name', name)
+    formData.append('email', email)
+    formData.append('message', message)
+
+    mutate(formData)
   }
 
   return (
@@ -37,9 +64,17 @@ export const Contact = () => {
             onSubmit={handleSubmit(onSubmit)}
             className="grid w-8/12 text-gray-500 mx-auto gap-7 py-14"
           >
+            
+            {isError ? (
+              <ErrorPrompt item="product" msg={error.message.toLowerCase()} />
+            ) : (
+              ''
+            )}
+            {isSuccess ? <Success item="product" /> : ''}
+
             <div className="flex flex-col w-full space-y-1 text-md">
               <label htmlFor="name" className="flex items-center font-semibold">
-                <UserCircleIcon className="w-5 mr-2" /> Name:
+                <UserCircleIcon className="w-5 mr-2" /> Fullname:
               </label>
               <input
                 type="text"
@@ -95,12 +130,21 @@ export const Contact = () => {
             </div>
 
             <div className="w-full">
-              <button
-                type="submit"
-                className="flex items-center justify-center bg-blue-700 hover:bg-blue-900  rounded-md tracking-wider cursor-pointer px-5 py-3 w-full text-white text-lg font-semibold"
-              >
-                Send a message <BiMailSend className="w-6 h-7 ml-2" />
-              </button>
+              {isLoading ? (
+                <button
+                  type="submit"
+                  className="flex items-center justify-center bg-blue-700 hover:bg-blue-900  rounded-md tracking-wider cursor-pointer px-5 py-3 w-full text-white text-lg font-semibold"
+                >
+                  Sending message... <BiMailSend className="w-6 h-7 ml-2" />
+                </button>
+              ) : (
+                <button
+                  type="submit"
+                  className="flex items-center justify-center bg-blue-700 hover:bg-blue-900  rounded-md tracking-wider cursor-pointer px-5 py-3 w-full text-white text-lg font-semibold"
+                >
+                  Send a message <BiMailSend className="w-6 h-7 ml-2" />
+                </button>
+              )}
             </div>
           </form>
         </div>
@@ -110,27 +154,30 @@ export const Contact = () => {
             Connect via:{' '}
           </h2>
           <div className="space-y-7 font-semibold text-md text-gray-400 w-fit">
-            <Link href={'https://www.github.com/hayormikun'} target={"_blank"}>
+            <Link href={'https://www.github.com/hayormikun'} target={'_blank'}>
               <a className="flex items-center">
                 <FaGithub className="w-6 mr-2 text-black" /> Github
               </a>
             </Link>
             <Link
               href={'https://www.linkedin.com/in/favour-akomolafe-7345b9114/'}
-              target={"_blank"}
+              target={'_blank'}
             >
               <a className="flex items-center">
                 <FaLinkedinIn className="w-6 mr-2 text-blue-400" /> LinkedIn
               </a>
             </Link>
 
-            <Link href={'mailto:akomolafefavour@gmail.com'} target={"_blank"}>
+            <Link href={'mailto:akomolafefavour@gmail.com'} target={'_blank'}>
               <a className="flex items-center">
                 <FaMailBulk className="w-6 mr-2 text-zinc-400" /> Mail
               </a>
             </Link>
 
-            <Link href={'https://www.twitter.com/FavorAkomolafe'} target={"_blank"}>
+            <Link
+              href={'https://www.twitter.com/FavorAkomolafe'}
+              target={'_blank'}
+            >
               <a className="flex items-center">
                 <FaTwitter className="w-6 mr-2 text-blue-400" /> Twitter
               </a>

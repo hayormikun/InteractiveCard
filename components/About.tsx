@@ -6,9 +6,10 @@ export const About = () => {
     <>
       <div
         id="about"
-        className="block md:grid grid-cols-3 gap-3 items-center md:h-[550px]"
+        className="block md:grid grid-cols-3 gap-5 items-center md:h-[550px]"
       >
         <div className="w-full overflow-hidden col-span-1">
+          <div className="flex w-full justify-center">
           <Image
             src={'/img/DSC_1554.jpg'}
             width={'350px'}
@@ -17,6 +18,7 @@ export const About = () => {
             alt="Favour Akomolafe"
             className="rounded-full"
           />
+          </div>
         </div>
         <div className="w-full col-span-2">
           <div className="flex flex-col my-12">
@@ -24,7 +26,7 @@ export const About = () => {
               Hello, I am <span className="text-blue-700">Favour</span>
             </h1>
             <p className="text-gray-500 font-medium mb-5">
-              Software developer at Behruz Hybrid, a
+              Software engineer at <b>Behruz Hybrid</b>, a
               software development company aimed at offering secure, scalable
               and desired products to clients. I build scalable web apps using modern frontend technologies and frameworks such as React.js, Next.js and develop backend application using Node.js and Express.js framework.
             </p>

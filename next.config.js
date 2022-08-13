@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
+require('dotenv').config()
+
 module.exports = {
   reactStrictMode: true,
-  images: {
-    domains: ['api.madcuisines.com']
+  env: {
+    BASE_URL: process.env.BASE_URL
   }
+
 }

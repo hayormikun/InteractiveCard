@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FaCheck } from 'react-icons/fa'
+import { FaCheckCircle } from 'react-icons/fa'
 
 type SuccessProp = {
   item: string
@@ -19,7 +19,7 @@ export const Success = ({ item }: SuccessProp) => {
           : 'hidden'
       }
     >
-      <FaCheck className="w-10 md:w-5 mr-2" />
+      <FaCheckCircle className="w-10 md:w-5 mr-2" />
 
       <p>{item} was created succesfully </p>
     </div>

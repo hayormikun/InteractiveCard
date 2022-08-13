@@ -13,7 +13,7 @@ export const Projects = () => {
         <About
           activeClass={'about'}
           to={'about'}
-          offset={-50}
+          offset={-100}
           duration={500}
           smooth={true}
         >

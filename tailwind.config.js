@@ -7,7 +7,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['Nunito']
+        grotesk: ['Space Grotesk']
+      },
+      colors: {
+        whiteColor: 'hsl(0, 0%, 100%)',
+        darkViolet: 'hsl(278, 68%, 11%)',
+        lightGrayishViolet: 'hsl(279, 6%, 55%)',
+        darkGrayViolet: 'hsl(270, 3%, 87%)',
+        redError: 'hsl(0, 100%, 66%)',
+        inputBorderFrom: 'hsl(249, 99%, 64%)',
+        inputBorderTo: 'hsl(278, 94%, 30%)',
       }
     },
   },

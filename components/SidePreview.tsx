@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CardContext } from './Context'
+
+
 
 export const SidePreview = () => {
+  const {
+    cardHolder,
+    cardNumber,
+    month,
+    year,
+    cvc,
+  } = useContext(CardContext)
+
   return (
     <div className='w-full h-full bg-purpleImg'>
-        <div className="absolute left-20 top-32 z-20">
+        <div className="absolute left-36 top-32 z-20">
             <div className="relative">
               <div className="absolute top-5 left-7 flex items-center">
                 <svg
@@ -26,20 +37,22 @@ export const SidePreview = () => {
                 </svg>
               </div>
               <div className="absolute bottom-16 left-7 text-whiteColor text-3xl">
-                0000 0000 0000 0000
+                {`${cardNumber.substr(0,4)} ${cardNumber.substr(4, 4)} ${cardNumber.substr(8,4)} ${cardNumber.substr(12,4)}`}
               </div>
 
               <div className="absolute bottom-5 left-7 right-5 text-whiteColor w-auto text-sm font-normal flex justify-between items-center">
-                <p>JANE APPLESEED</p>
-                <p>00/00</p>
+                <p>{cardHolder}</p>
+                <p>
+                  {`${month} / ${year}`}
+                </p>
               </div>
               <img src="/img/bg-card-front.png" alt="card details front" />
             </div>
           </div>
 
-          <div className="absolute left-44 bottom-36 z-20">
+          <div className="absolute left-56 bottom-32 z-20">
             <div className="relative">
-              <p className="absolute text-white top-[6.7rem] right-14">000</p>
+              <p className="absolute text-white top-[6.7rem] right-14">{cvc}</p>
               <img src="/img/bg-card-back.png" alt="card details back" />
             </div>
           </div>

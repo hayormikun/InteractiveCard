@@ -2,19 +2,35 @@ import { SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from '@hookform/resolvers/yup'
 import Image from 'next/image'
-import { createContext, useState } from 'react'
+import { useContext, useState } from 'react'
+import { CardContext } from './Context'
 
 const schema = yup.object().shape({
-  cardHolder: yup.string().required('Card holder name is required'),
+  cardHolder: yup.string().required("Can't be blank"),
   cardNumber: yup
     .number()
-    .positive('')
-    .integer('')
-    .max(9999999999999999, 'Invalid card number')
-    .required('card number is required'),
-  month: yup.number().max(12, 'Invalid format').required("Can't be blank"),
-  year: yup.number().max(99, 'Invalid format').required(`Can't be blank`),
-  cvc: yup.number().max(999, 'Invalid format').required("Can't be blank"),
+    .typeError('Wrong format, numbers only')
+    .min(1000000000000000, 'Minimum of 16 digits')
+    .max(9999999999999999, 'Maximum of 16 digits')
+    .required("Can't be blank"),
+  month: yup
+    .number()
+    .typeError('Wrong format')
+    .min(1, 'Wrong format')
+    .max(12, 'Wrong format')
+    .required("Can't be blank"),
+  year: yup
+    .number()
+    .typeError('Wrong format')
+    .min(1, 'Wrong format')
+    .max(99, 'Wrong format')
+    .required(`Can't be blank`),
+  cvc: yup
+    .number()
+    .typeError('Wrong format')
+    .min(100, 'Wrong format')
+    .max(999, 'Wrong format')
+    .required("Can't be blank"),
 })
 
 type FormValues = {
@@ -29,11 +45,13 @@ type FormInputs = yup.InferType<typeof schema>
 
 export const Form = () => {
   const [isCompleted, setIsCompleted] = useState(false)
-  // const [cardHolder, setCardHolder] = useState('')
-  // const [cardNumber, setCardNumber] = useState('')
-  // const [month, setMonth] = useState('')
-  // const [year, setYear] = useState('')
-  // const [cvc, setCvc] = useState('')
+  const {
+    setCardHolder,
+    setCardNumber,
+    setMonth,
+    setYear,
+    setCvc,
+  } = useContext(CardContext)
 
   const {
     register,
@@ -46,12 +64,27 @@ export const Form = () => {
 
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
     const { cardHolder, cardNumber, month, year, cvc } = data
+    if (month < 10) {
+      let mont = month.toString()
+      let mm = `0${mont}`
+      setMonth(mm)
+    } else {
+      setMonth(month.toString())
+    }
 
-    // setCardHolder(cardHolder)
-    // setCardNumber(cardNumber.toString())
-    // setMonth(month.toString())
-    // setYear(year.toString())
-    // setCvc(cvc.toString())
+    if (year < 10) {
+      let yea = year.toString()
+      let yy = `0${yea}`
+      setYear(yy)
+    } else {
+      setYear(year.toString())
+    }
+
+    setCardHolder(cardHolder)
+    setCardNumber(cardNumber.toString())
+    
+    
+    setCvc(cvc.toString())
 
     setIsCompleted(true)
   }
@@ -84,7 +117,7 @@ export const Form = () => {
               />
             </span>
             {errors.cardHolder && (
-              <span className="text-redError">{errors.cardHolder.message}</span>
+              <span className="text-redError mt-2">{errors.cardHolder.message}</span>
             )}
           </div>
           <div className="flex flex-col mt-5">
@@ -108,7 +141,7 @@ export const Form = () => {
               />
             </span>
             {errors.cardNumber && (
-              <span className="text-redError">{errors.cardNumber.message}</span>
+              <span className="text-redError mt-2">{errors.cardNumber.message}</span>
             )}
           </div>
           <div className="flex md:grid md:grid-cols-2 gap-5 mt-5">
@@ -150,7 +183,7 @@ export const Form = () => {
               <div className="text-redError">
                 {errors.month?.message ||
                   (errors.year?.message && (
-                    <span className="text-redError">
+                    <span className="text-redError mt-2">
                       {errors.month?.message || errors.year?.message}
                     </span>
                   ))}
@@ -169,17 +202,17 @@ export const Form = () => {
                 <input
                   className={
                     errors.cvc
-                      ? 'm-[1px] p-2 w-[98.5%] rounded-md  border border-redError'
-                      : 'm-[1px] p-2 w-[98.5%] rounded-md border border-darkGrayViolet'
+                      ? 'm-[1px] p-2 w-[98.5%] font-normal rounded-md  border border-redError'
+                      : 'm-[1px] p-2 w-[98.5%] font-normal rounded-md border border-darkGrayViolet'
                   }
                   {...register('cvc')}
                   type={'number'}
                   placeholder="e.g.
-                123"
+                  123"
                 />
               </span>
               {errors.cvc && (
-                <span className="text-redError">{errors.cvc.message}</span>
+                <span className="text-redError mt-2">{errors.cvc.message}</span>
               )}
             </div>
           </div>

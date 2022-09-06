@@ -3,7 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.grad, .grad:focus {
+.grad {
+    border: 0.5px solid transparent;
+}
+
+.grad:active {
     border: 0.5px solid transparent;
     -webkit-background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     -moz-background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
@@ -18,4 +22,14 @@
     background-image: url('../public/img/bg-main-desktop.png');
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+
+@media (min-width: 375px) and (max-width: 768px) {
+    .bg-purpleImg {
+    background-image: url('../public/img/bg-main-mobile.png');
+    background-size: auto;
+    background-repeat: repeat-x;
+    margin-bottom: 20rem;
+    }
 }

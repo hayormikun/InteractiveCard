@@ -14,7 +14,7 @@ export const SidePreview = () => {
 
   return (
     <div className='w-full h-full bg-purpleImg'>
-        <div className="absolute left-36 top-32 z-20">
+        <div className="absolute left-36 top-32 z-20 scale-90 md:scale-100">
             <div className="relative">
               <div className="absolute top-5 left-7 flex items-center">
                 <svg
@@ -50,7 +50,7 @@ export const SidePreview = () => {
             </div>
           </div>
 
-          <div className="absolute left-56 bottom-32 z-20">
+          <div className="absolute left-56 bottom-32 z-10 scale-90 md:scale-100">
             <div className="relative">
               <p className="absolute text-white top-[6.7rem] right-14">{cvc}</p>
               <img src="/img/bg-card-back.png" alt="card details back" />

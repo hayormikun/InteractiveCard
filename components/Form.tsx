@@ -104,12 +104,12 @@ export const Form = () => {
               {' '}
               CARDHOLDER NAME{' '}
             </label>
-            <span className="h-fit">
+            <span className="grad h-fit">
               <input
                 className={
                   errors.cardHolder
                     ? 'm-[1px] p-2 w-[99.5%] rounded-md border border-redError'
-                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet'
+                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet active:outline-none active:border-none'
                 }
                 type="text"
                 {...register('cardHolder')}

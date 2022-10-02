@@ -66,11 +66,11 @@ export const Contact = () => {
           >
             
             {isError ? (
-              <ErrorPrompt item="product" msg={error.message.toLowerCase()} />
+              <ErrorPrompt item="message" msg={error.message.toLowerCase()} />
             ) : (
               ''
             )}
-            {isSuccess ? <Success item="product" /> : ''}
+            {isSuccess ? <Success item="message" /> : ''}
 
             <div className="flex flex-col w-full space-y-1 text-md">
               <label htmlFor="name" className="flex items-center font-semibold">

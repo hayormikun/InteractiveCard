@@ -21,7 +21,7 @@ export const Success = ({ item }: SuccessProp) => {
     >
       <FaCheckCircle className="w-10 md:w-5 mr-2" />
 
-      <p>{item} was created succesfully </p>
+      <p>{item} was sent succesfully </p>
     </div>
   )
 }

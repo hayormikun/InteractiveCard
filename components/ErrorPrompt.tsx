@@ -22,7 +22,7 @@ export const ErrorPrompt = ({ item, msg }: ErrorProps) => {
     >
       <FaTimesCircle className="w-10 md:w-5 mr-2" />
       <p>
-        Error encountered while creating {item} : {msg}
+        Error encountered while sending {item} : {msg}
       </p>
     </div>
   )

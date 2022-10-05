@@ -43,7 +43,7 @@ export const Projects = () => {
           </div>
         </About>
 
-        <Link href={'madcuisine'} target={'_blank'}>
+        <Link href={''} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/madcuisines.png'}
@@ -58,10 +58,10 @@ export const Projects = () => {
                 Madcuisines
               </h2>
               <p className="text-gray-400 font-medium">
-                Madcuisines is a Uk meal booking app where customers order their
+                Madcuisines is a Uk meal booking mobile app where customers order their
                 desired meals and get it delivered to them timely at their
                 desired locations. <br /> <br /> Products and orders are
-                monitored and managed by authorized personnels via Madcuisines
+                monitored and managed by authorized personnels via Madcuisines web
                 admin panel.
               </p>
             </div>
@@ -96,7 +96,7 @@ export const Projects = () => {
           </div>
         </Link>
 
-        <Link href={'http://medvistadiagnostics.com/'} target={'_blank'}>
+        {/* <Link href={'http://medvistadiagnostics.com/'} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
               src={'/img/medvista.png'}
@@ -119,7 +119,7 @@ export const Projects = () => {
               </p>
             </div>
           </div>
-        </Link>
+        </Link> */}
 
         <Link href={'http://biosec.com.ng/'} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer rounded-md shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">

@@ -42,8 +42,6 @@ export const Contact = () => {
   const onSubmit: SubmitHandler<FormValues> = async (data: FormValues) => {
     const { name, email, message } = data
 
-    console.log(name, email, message)
-
     const formData = new FormData()
 
     formData.append('name', name)

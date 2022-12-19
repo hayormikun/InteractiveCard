@@ -58,7 +58,7 @@ export const Projects = () => {
                 Trending Repos
               </h2>
               <p className="text-gray-400 font-medium">
-                Trending Repos is a personal project that showcase the most
+                Trending Repos is a personal project that showcases the most
                 starred github repositories created in the last 3 months <br />{' '}
                 <br /> It aims at keeping people updated with new and trending
                 technology in the tech space.

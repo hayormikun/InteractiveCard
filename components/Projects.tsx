@@ -46,7 +46,7 @@ export const Projects = () => {
         <Link href={'https://trending-repos-psi.vercel.app/'} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
             <Image
-              src={'/img/medvista.png'}
+              src={'/img/trendingrepos.png'}
               width={520}
               height={348}
               layout={'responsive'}

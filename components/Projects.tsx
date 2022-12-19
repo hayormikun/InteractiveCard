@@ -32,16 +32,40 @@ export const Projects = () => {
               </h2>
               <p className="text-gray-400 font-medium">
                 This portfolio site is aimed at showcasing completed projects by
-                Favour Akomolafe. <br /> <br />Favour Akomolafe is a software
-                developer at Behruz Hybrid, a software development company aimed
-                at offering secure, scalable and desired products to clients.
-                
+                Favour Akomolafe. <br /> <br />
+                Favour Akomolafe is a software developer at Behruz Hybrid, a
+                software development company aimed at offering secure, scalable
+                and desired products to clients.
                 <br /> <br /> Visitors can send a message discussing their next
                 project or schedule a meeting with him via this site.
               </p>
             </div>
           </div>
         </About>
+
+        <Link href={'https://trending-repos-psi.vercel.app/'} target={'_blank'}>
+          <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
+            <Image
+              src={'/img/medvista.png'}
+              width={520}
+              height={348}
+              layout={'responsive'}
+              alt="Trending Repos"
+            />
+
+            <div className="block p-5">
+              <h2 className="text-blue-400 text-lg font-semibold mb-3">
+                Trending Repos
+              </h2>
+              <p className="text-gray-400 font-medium">
+                Trending Repos is a personal project that showcase the most
+                starred github repositories created in the last 3 months <br />{' '}
+                <br /> It aims at keeping people updated with new and trending
+                technology in the tech space.
+              </p>
+            </div>
+          </div>
+        </Link>
 
         <Link href={''} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
@@ -58,11 +82,11 @@ export const Projects = () => {
                 Madcuisines
               </h2>
               <p className="text-gray-400 font-medium">
-                Madcuisines is a Uk meal booking mobile app where customers order their
-                desired meals and get it delivered to them timely at their
-                desired locations. <br /> <br /> Products and orders are
-                monitored and managed by authorized personnels via Madcuisines web
-                admin panel.
+                Madcuisines is a Uk meal booking mobile app where customers
+                order their desired meals and get it delivered to them timely at
+                their desired locations. <br /> <br /> Products and orders are
+                monitored and managed by authorized personnels via Madcuisines
+                web admin panel.
               </p>
             </div>
           </div>
@@ -70,14 +94,14 @@ export const Projects = () => {
 
         <Link href={'http://savioursassembly.com/'} target={'_blank'}>
           <div className="bg-gray-50 max-w-[520px] cursor-pointer shadow-md overflow-hidden mb-10 mx-auto space-y-2 p-3">
-            <div className='border-b-2 border-gray-100'>
-            <Image
-              src={'/img/savioursassembly.png'}
-              width={520}
-              height={348}
-              layout={'responsive'}
-              alt="Saviours Assembly"
-            />
+            <div className="border-b-2 border-gray-100">
+              <Image
+                src={'/img/savioursassembly.png'}
+                width={520}
+                height={348}
+                layout={'responsive'}
+                alt="Saviours Assembly"
+              />
             </div>
 
             <div className="block p-5">

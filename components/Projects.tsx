@@ -54,7 +54,7 @@ export const Projects = () => {
             />
 
             <div className="block p-5">
-              <h2 className="text-blue-400 text-lg font-semibold mb-3">
+              <h2 className="text-teal-400 text-lg font-semibold mb-3">
                 Trending Repos
               </h2>
               <p className="text-gray-400 font-medium">

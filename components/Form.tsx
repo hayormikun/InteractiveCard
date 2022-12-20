@@ -104,12 +104,12 @@ export const Form = () => {
               {' '}
               CARDHOLDER NAME{' '}
             </label>
-            <span className="grad h-fit">
+            <span className={errors.cardHolder ? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0"}>
               <input
                 className={
                   errors.cardHolder
-                    ? 'm-[1px] p-2 w-[99.5%] rounded-md border border-redError'
-                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet active:outline-none active:border-none'
+                    ? 'm-[1px] p-2 w-[99.5%] rounded-md border border-redError active:border-redError focus:border-redError active:outline-none focus:outline-none'
+                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet active:border-none focus:border-none active:outline-none focus:outline-none'
                 }
                 type="text"
                 {...register('cardHolder')}
@@ -128,12 +128,12 @@ export const Form = () => {
               {' '}
               CARD NUMBER{' '}
             </label>
-            <span className="h-fit">
+            <span className={errors.cardNumber ? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[99.6%] p-0 m-0"}>
               <input
                 className={
                   errors.cardNumber
-                    ? 'm-[1px] p-2 w-[99.5%] rounded-md border border-redError'
-                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet'
+                    ? 'm-[1px] p-2 w-[99.5%] rounded-md border border-redError active:border-redError focus:border-redError active:outline-none focus:outline-none'
+                    : 'm-[1px] p-2 w-[99.5%] rounded-md border border-darkGrayViolet active:border-none focus:border-none active:outline-none focus:outline-none'
                 }
                 type="number"
                 {...register('cardNumber')}
@@ -154,12 +154,12 @@ export const Form = () => {
                 EXP. DATE (MM/YY){' '}
               </label>
               <div className="flex gap-2">
-                <span className="h-fit">
+              <span className={errors.month? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0"}>
                   <input
                     className={
                       errors.month
-                        ? 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-redError'
-                        : 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-darkGrayViolet'
+                        ? 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-redError active:border-redError focus:border-redError active:outline-none focus:outline-none'
+                        : 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-darkGrayViolet active:border-none focus:border-none active:outline-none focus:outline-none'
                     }
                     {...register('month')}
                     type={'number'}
@@ -167,12 +167,12 @@ export const Form = () => {
                   />
                 </span>
 
-                <span className="h-fit">
+                <span className={errors.year? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[97%] p-0 m-0"}>
                   <input
                     className={
                       errors.year
-                        ? 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md  border border-redError'
-                        : 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-darkGrayViolet'
+                        ? 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-redError active:border-redError focus:border-redError active:outline-none focus:outline-none'
+                        : 'm-[1px] p-2 pl-3 w-[97%] font-normal rounded-md border border-darkGrayViolet active:border-none focus:border-none active:outline-none focus:outline-none'
                     }
                     {...register('year')}
                     type={'number'}
@@ -198,12 +198,12 @@ export const Form = () => {
                 {' '}
                 CVC
               </label>
-              <span className="h-fit">
+              <span className={errors.cvc? '' : "grad h-fit active:outline-none focus:outline-none rounded-md w-[98.5%] p-0 m-0"}>
                 <input
                   className={
                     errors.cvc
-                      ? 'm-[1px] p-2 w-[98.5%] font-normal rounded-md  border border-redError'
-                      : 'm-[1px] p-2 w-[98.5%] font-normal rounded-md border border-darkGrayViolet'
+                      ? 'm-[1px] p-2 w-[98.5%] font-normal rounded-md border border-redError active:border-redError focus:border-redError active:outline-none focus:outline-none'
+                      : 'm-[1px] p-2 w-[98.5%] font-normal rounded-md border border-darkGrayViolet active:border-none focus:border-none active:outline-none focus:outline-none'
                   }
                   {...register('cvc')}
                   type={'number'}

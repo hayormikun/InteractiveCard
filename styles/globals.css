@@ -3,12 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.grad {
-    border: 0.5px solid transparent;
-}
-
-.grad:active {
-    border: 0.5px solid transparent;
+.grad:active, .grad:focus, .grad:focus-visible, .grad:focus-within {
+    border: 1px solid;
     -webkit-background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     -moz-background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
     -o-background-image: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));

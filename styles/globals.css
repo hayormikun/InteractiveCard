@@ -15,7 +15,7 @@
 }
 
 .bg-purpleImg {
-    background-image: url('../public/img/bg-main-desktop.png');
+    background-image: url('/img/bg-main-desktop.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -23,7 +23,7 @@
 
 @media (max-width: 539px) {
     .bg-purpleImg {
-    background-image: url('../public/img/bg-main-mobile.png');
+    background-image: url('/img/bg-main-mobile.png');
     background-size: 100%;
     background-repeat: repeat-x;
     margin-bottom: 23em;
@@ -118,7 +118,7 @@
 @media (min-width: 415px) and (max-width: 540px) {
 
     .bg-purpleImg {
-        background-image: url('../public/img/bg-main-mobile.png');
+        background-image: url('/img/bg-main-mobile.png');
         background-size: auto;
         background-repeat: repeat-x;
         margin-bottom: 23em;
@@ -149,7 +149,7 @@
 @media (min-width: 541px) and (max-width: 820px) {
 
     .bg-purpleImg {
-        background-image: url('../public/img/bg-main-mobile.png');
+        background-image: url('/img/bg-main-mobile.png');
         background-size: 70%;
         background-repeat: repeat-x;
         margin-bottom: 23em;
@@ -180,7 +180,7 @@
 @media (min-width: 821px) and (max-width: 1023px) {
 
     .bg-purpleImg {
-        background-image: url('../public/img/bg-main-mobile.png');
+        background-image: url('/img/bg-main-mobile.png');
         background-size: 70%;
         background-repeat: repeat-x;
         margin-bottom: 20em;

@@ -79,7 +79,7 @@ export const Form = () => {
       setYear(year.toString())
     }
 
-    setCardHolder(cardHolder)
+    setCardHolder(cardHolder.toUpperCase)
     setCardNumber(cardNumber.toString())
 
     setCvc(cvc.toString())

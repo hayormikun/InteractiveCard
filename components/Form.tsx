@@ -97,7 +97,7 @@ export const Form = () => {
           <div className="flex flex-col">
             <label
               htmlFor="holder"
-              className="text-darkViolet text-[12px] mb-1"
+              className="text-darkViolet text-[14px] mb-1"
             >
               {' '}
               CARDHOLDER NAME{' '}
@@ -129,7 +129,7 @@ export const Form = () => {
           <div className="flex flex-col mt-5">
             <label
               htmlFor="number"
-              className="text-darkViolet text-[12px] mb-1"
+              className="text-darkViolet text-[14px] mb-1"
             >
               {' '}
               CARD NUMBER{' '}
@@ -162,7 +162,7 @@ export const Form = () => {
             <div className="md:col-span-1 flex flex-col">
               <label
                 htmlFor="holder"
-                className="text-[12px] mb-1 text-darkViolet"
+                className="text-[14px] mb-1 text-darkViolet"
               >
                 {' '}
                 EXP. DATE (MM/YY){' '}
@@ -219,7 +219,7 @@ export const Form = () => {
             <div className="md:col-span-1 flex flex-col">
               <label
                 htmlFor="holder"
-                className="text-darkViolet mb-1 text-[12px]"
+                className="text-darkViolet mb-1 text-[14px]"
               >
                 {' '}
                 CVC

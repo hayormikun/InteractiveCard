@@ -35,7 +35,7 @@ export const SidePreview = () => {
             )} ${cardNumber.substr(8, 4)} ${cardNumber.substr(12, 4)}`}
           </div>
 
-          <div className="absolute bottom-5 left-7 right-5 text-whiteColor w-auto text-md font-normal flex justify-between items-center">
+          <div className="absolute bottom-5 left-7 right-5 text-whiteColor w-auto text-sm font-normal flex justify-between items-center">
             <p>{cardHolder}</p>
             <p>{`${month} / ${year}`}</p>
           </div>

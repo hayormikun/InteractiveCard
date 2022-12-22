@@ -35,7 +35,7 @@ export const SidePreview = () => {
             )} ${cardNumber.substr(8, 4)} ${cardNumber.substr(12, 4)}`}
           </div>
 
-          <div className="absolute bottom-5 left-7 right-5 text-whiteColor w-auto text-sm font-normal flex justify-between items-center">
+          <div className="absolute bottom-5 left-7 right-5 text-whiteColor w-auto text-md font-normal flex justify-between items-center">
             <p>{cardHolder}</p>
             <p>{`${month} / ${year}`}</p>
           </div>
@@ -45,7 +45,12 @@ export const SidePreview = () => {
 
       <div className="absolute m-back left-56 bottom-32 lg:scale-100 z-10">
         <div className="relative">
-          <p className="absolute text-white top-[5.3rem] lg:top-[6.7rem] right-12 lg:right-14" id='cvc'>{cvc}</p>
+          <p
+            className="absolute text-white top-[5.3rem] lg:top-[6.7rem] right-12 lg:right-14"
+            id="cvc"
+          >
+            {cvc}
+          </p>
           <img src="/img/bg-card-back.png" alt="card details back" />
         </div>
       </div>

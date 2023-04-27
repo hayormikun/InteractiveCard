@@ -54,7 +54,7 @@ Users should be able to:
 
 ### What I learned
 
-While working on this project, i encountered issues with styling the input field border with linear gradient color. I order to solve tis issue, i learnt how to style input field borders using the linear-gradient property. My method of solving this issue is highlighted in the code snippet below. 
+While working on this project, I encountered issues with styling the input field border with linear gradient color. In order to solve this issue, i learnt how to style input field borders using the linear-gradient property. My method of solving this issue is highlighted in the code snippet below. 
 
 ```JSX
 <span
